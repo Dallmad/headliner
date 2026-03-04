@@ -1,0 +1,22 @@
+export default {
+  printWidth: 100,
+  tabWidth: 2,
+  singleQuote: true,
+  trailingComma: 'all',
+  semi: true,
+  importOrder: [
+    '^react',
+    '^@api/(.*)$',
+    '^@app/(.*)$',
+    '^@assets/(.*)$',
+    '^@components/(.*)$',
+    '^@constants/(.*)$',
+    '^@helpers/(.*)$',
+    '^@pages/(.*)$',
+    '^[./]',
+    '^(.scss)$',
+  ],
+  importOrderSeparation: true,
+  importOrderSortSpecifiers: true,
+  plugins: ['@trivago/prettier-plugin-sort-imports'],
+};
