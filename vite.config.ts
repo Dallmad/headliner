@@ -4,12 +4,8 @@ import { defineConfig } from 'vite';
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/headliner/',
   plugins: [react()],
-  build: {
-    rollupOptions: {
-      external: ['react', 'react/jsx-runtime', 'react-dom', 'react-dom/client'],
-    },
-  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

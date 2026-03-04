@@ -3,14 +3,13 @@
   "version": "0.1.0",
   "homepage": "https://Dallmad.github.io/headliner",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "npx vite build --config vite.config.ts",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "browserslist": {
     "production": [
