@@ -1,4 +1,4 @@
-import{jsxs as n,jsx as e}from"react/jsx-runtime";import{f as p,u,c as g}from"./formatCurrency-DbFwMuEj.js";import{c as i,f as x,r as m,e as v,k as w}from"./index-DzBh2GCI.js";import{useState as k}from"react";import"react-dom";import"react-dom/client";const y=i.div`
+import{c as r,j as e,f as b,r as f,i as u,e as g,k as m}from"./index-CZPhknQp.js";import{f as c,u as j,c as v}from"./formatCurrency-B3HU__GG.js";const w=r.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,7 +6,7 @@ import{jsxs as n,jsx as e}from"react/jsx-runtime";import{f as p,u,c as g}from"./
   padding: 20px;
   background: #f8fafc;
   border-top: 1px solid #e2e8f0;
-`,h=i.button`
+`,p=r.button`
   padding: 8px 16px;
   border-radius: 6px;
   border: 1px solid ${t=>t.active?"#3b82f6":"#e2e8f0"};
@@ -24,10 +24,10 @@ import{jsxs as n,jsx as e}from"react/jsx-runtime";import{f as p,u,c as g}from"./
   &:hover:not(:disabled) {
     background: ${t=>t.active?"#2563eb":"#f1f5f9"};
   }
-`,C=i.span`
+`,k=r.span`
   font-size: 0.9rem;
   color: #64748b;
-`,P=({total:t,limit:a,skip:r,onPageChange:s})=>{const d=Math.floor(r/a)+1,o=Math.ceil((t??0)/a);return n(y,{children:[e(h,{disabled:d===1,onClick:()=>s(r-a),children:"Back"}),n(C,{children:["Page ",e("strong",{children:d})," from ",o]}),e(h,{disabled:d===o,onClick:()=>s(r+a),children:"Forward"})]})},T=i.div``,I=i.div`
+`,y=({total:t,limit:i,skip:s,onPageChange:n})=>{const a=Math.floor(s/i)+1,o=Math.ceil((t??0)/i);return e.jsxs(w,{children:[e.jsx(p,{disabled:a===1,onClick:()=>n(s-i),children:"Back"}),e.jsxs(k,{children:["Page ",e.jsx("strong",{children:a})," from ",o]}),e.jsx(p,{disabled:a===o,onClick:()=>n(s+i),children:"Forward"})]})},C=r.div``,P=r.div`
   position: absolute;
   ${({isLast:t})=>t?"bottom: 100%;":"top: 100%;"}
   left: 10px;
@@ -41,7 +41,7 @@ import{jsxs as n,jsx as e}from"react/jsx-runtime";import{f as p,u,c as g}from"./
   pointer-events: none;
   visibility: visible;
   display: block;
-`,$=i.div`
+`,T=r.div`
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1.2fr;
   font-weight: bold;
@@ -52,7 +52,7 @@ import{jsxs as n,jsx as e}from"react/jsx-runtime";import{f as p,u,c as g}from"./
   padding-bottom: 8px;
   margin-bottom: 8px;
   text-transform: uppercase;
-`,L=i.div`
+`,I=r.div`
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1.2fr;
   gap: 8px;
@@ -64,11 +64,11 @@ import{jsxs as n,jsx as e}from"react/jsx-runtime";import{f as p,u,c as g}from"./
     font-weight: 600;
     text-align: right;
   }
-`,z=i.span`
+`,$=r.span`
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-`,A=({products:t,isLastItems:a})=>n(I,{isLast:a,children:[n($,{children:[e("span",{children:"Item"}),e("span",{children:"Price"}),e("span",{children:"Qty"}),e("span",{children:"Total"})]}),t.map(r=>n(L,{children:[e(z,{title:r.title,children:r.title}),e("span",{children:p(r.price)}),n("span",{children:["x",r.quantity]}),e("span",{children:p(r.total)})]},r.id))]}),D=i.div`
+`,L=({products:t,isLastItems:i})=>e.jsxs(P,{isLast:i,children:[e.jsxs(T,{children:[e.jsx("span",{children:"Item"}),e.jsx("span",{children:"Price"}),e.jsx("span",{children:"Qty"}),e.jsx("span",{children:"Total"})]}),t.map(s=>e.jsxs(I,{children:[e.jsx($,{title:s.title,children:s.title}),e.jsx("span",{children:c(s.price)}),e.jsxs("span",{children:["x",s.quantity]}),e.jsx("span",{children:c(s.total)})]},s.id))]}),z=r.div`
   width: 100%;
   border-radius: 8px;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
@@ -76,12 +76,12 @@ import{jsxs as n,jsx as e}from"react/jsx-runtime";import{f as p,u,c as g}from"./
   margin-top: 20px;
   overflow: visible;
   position: relative;
-`,M=i.table`
+`,R=r.table`
   width: 100%;
   border-collapse: collapse;
   text-align: left;
   font-family: sans-serif;
-`,l=i.th`
+`,d=r.th`
   background-color: #f8fafc;
   padding: 12px 16px;
   color: #64748b;
@@ -89,20 +89,20 @@ import{jsxs as n,jsx as e}from"react/jsx-runtime";import{f as p,u,c as g}from"./
   border-bottom: 2px solid #e2e8f0;
   text-transform: uppercase;
   font-size: 0.75rem;
-`,c=i.td`
+`,l=r.td`
   padding: 16px;
   border-bottom: 1px solid #e2e8f0;
   color: #1e293b;
   vertical-align: middle;
-`,R=i.td`
+`,A=r.td`
   position: relative;
   padding: 12px;
   border-bottom: 1px solid #dee2e6;
-`,S=i.tr`
+`,D=r.tr`
   cursor: pointer;
   transition: background-color 0.2s;
   position: relative;
   &:hover {
     background-color: #f1f5f9;
   }
-`,j=({carts:t})=>{const a=x(),[r,s]=k(null),d=o=>{a(`${m.CARTS}/${o}`)};return e(D,{children:n(M,{children:[e("thead",{children:n("tr",{children:[e(l,{children:"Cart ID"}),e(l,{children:"User ID"}),e(l,{children:"Items Count"}),e(l,{children:"Total Amount"})]})}),e("tbody",{children:t?.map((o,f)=>{const b=f>=t.length/2;return n(S,{onClick:()=>d(o.id),onMouseEnter:()=>s(o.id),onMouseLeave:()=>s(null),children:[n(R,{children:["# ",o.id," ",r===o.id&&o.products&&e(A,{products:o.products,isLastItems:b})]}),e(c,{children:o.userId}),n(c,{children:[o.totalProducts," items"]}),e(c,{children:p(o.total)})]},o.id)})})]})})},K=()=>{const{skip:t,limit:a,setSkip:r}=v(),{data:s}=u({queryKey:["carts",10,t],queryFn:()=>g.getCartsList(a,t),placeholderData:w});return n(T,{children:[e(j,{carts:s?.carts}),e(P,{total:s?.total,limit:a,skip:t,onPageChange:r})]})};export{K as default};
+`,M=({carts:t})=>{const i=b(),[s,n]=f.useState(null),a=o=>{i(`${u.CARTS}/${o}`)};return e.jsx(z,{children:e.jsxs(R,{children:[e.jsx("thead",{children:e.jsxs("tr",{children:[e.jsx(d,{children:"Cart ID"}),e.jsx(d,{children:"User ID"}),e.jsx(d,{children:"Items Count"}),e.jsx(d,{children:"Total Amount"})]})}),e.jsx("tbody",{children:t?.map((o,x)=>{const h=x>=t.length/2;return e.jsxs(D,{onClick:()=>a(o.id),onMouseEnter:()=>n(o.id),onMouseLeave:()=>n(null),children:[e.jsxs(A,{children:["# ",o.id," ",s===o.id&&o.products&&e.jsx(L,{products:o.products,isLastItems:h})]}),e.jsx(l,{children:o.userId}),e.jsxs(l,{children:[o.totalProducts," items"]}),e.jsx(l,{children:c(o.total)})]},o.id)})})]})})},E=()=>{const{skip:t,limit:i,setSkip:s}=g(),{data:n}=j({queryKey:["carts",10,t],queryFn:()=>v.getCartsList(i,t),placeholderData:m});return e.jsxs(C,{children:[e.jsx(M,{carts:n?.carts}),e.jsx(y,{total:n?.total,limit:i,skip:t,onPageChange:s})]})};export{E as default};
