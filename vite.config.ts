@@ -1,0 +1,25 @@
+import react from '@vitejs/plugin-react';
+import path from 'path';
+import { defineConfig } from 'vite';
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  build: {
+    rollupOptions: {
+      external: ['react', 'react/jsx-runtime', 'react-dom', 'react-dom/client'],
+    },
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+      '@app': path.resolve(__dirname, './src/app'),
+      '@api': path.resolve(__dirname, './src/api'),
+      '@components': path.resolve(__dirname, './src/components'),
+      '@common': path.resolve(__dirname, './src/common'),
+      '@helpers': path.resolve(__dirname, './src/helpers'),
+      '@pages': path.resolve(__dirname, './src/pages'),
+      '@assets': path.resolve(__dirname, './src/assets'),
+    },
+  },
+});
