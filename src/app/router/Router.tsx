@@ -4,8 +4,9 @@ import { lazy } from 'react';
 import type { RouteObject } from 'react-router-dom';
 import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom';
 
+import CartsList from '@pages/CartsList';
+
 const Cart = lazy(() => import('@pages/Cart'));
-const CartsList = lazy(() => import('@pages/CartsList'));
 
 const publicRoutes: RouteObject[] = [
   { path: '*', element: <Navigate to={routes.CARTS} /> },
@@ -14,5 +15,5 @@ const publicRoutes: RouteObject[] = [
 ];
 
 export const Router = () => {
-  return <RouterProvider router={createBrowserRouter(publicRoutes)} />;
+  return <RouterProvider router={createBrowserRouter(publicRoutes, { basename: '/headliner' })} />;
 };
